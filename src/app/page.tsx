@@ -7,6 +7,9 @@ export default function Home() {
     <div>
       <Header></Header>
       <VideoSection></VideoSection>
+      <div className="min-h-screen bg-red-300">
+
+      </div>
     </div>
   );
 }

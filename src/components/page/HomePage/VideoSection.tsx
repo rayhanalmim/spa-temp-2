@@ -1,10 +1,11 @@
-"use client"
-import { useState, useRef } from 'react';
-import { IoMenu } from "react-icons/io5";
-import { Button } from "@/components/ui/button"
+"use client"; // Ensure this component runs on the client
+
+import { useState, useRef, useEffect } from 'react';
+import NavBar from '@/components/shared/NavBar';
 
 const VideoSection = () => {
     const [isPlaying, setIsPlaying] = useState(true); // State to manage video play/pause
+    const [isScrolled, setIsScrolled] = useState(false); // State to manage navbar color
     const videoRef = useRef<HTMLVideoElement | null>(null); // Ref for the video element
 
     const toggleVideo = () => {
@@ -17,6 +18,22 @@ const VideoSection = () => {
             setIsPlaying(!isPlaying);
         }
     };
+
+    // Handle scroll event to change navbar color
+    useEffect(() => {
+        const handleScroll = () => {
+            const videoSection = videoRef.current?.parentElement; // Get the parent div of the video
+            if (videoSection) {
+                const { top } = videoSection.getBoundingClientRect();
+                setIsScrolled(top < 0); // Change navbar color when video section is out of view
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll); // Attach scroll event listener
+        return () => {
+            window.removeEventListener('scroll', handleScroll); // Clean up on unmount
+        };
+    }, []);
 
     return (
         <div className="relative w-full h-full">
@@ -40,28 +57,8 @@ const VideoSection = () => {
                 </video>
 
                 {/* Video controls */}
-                <div className='absolute  top-4 px-10 w-full'>
-                    <div className='flex justify-between'>
-                        <div className='flex gap-4'>
-                            <div className='flex items-center'>
-                                <div
-                                    className=" bg-black bg-opacity-50 p-2 rounded-full cursor-pointer w-12 h-12"
-
-                                >
-                                    {/* Play/Pause button */}
-                                    <IoMenu className='text-3xl text-white'></IoMenu>
-                                </div>
-                            </div>
-                            <div
-                                className="  p-2 rounded-full cursor-pointer">
-                                <img className='w-20' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/mohg-nav-fan-logo-no-text.svg" alt="" />
-                            </div>
-                        </div>
-                        <div className='flex justify-center items-center'>
-                            <Button variant="destructive">Book</Button>
-                        </div>
-                    </div>
-
+                <div className='absolute top-4 z-10 px-10 w-full'>
+                    <NavBar isScrolled={isScrolled} /> {/* Pass the scrolled state to NavBar */}
                 </div>
             </div>
         </div>
