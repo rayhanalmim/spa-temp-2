@@ -1,7 +1,7 @@
 "use client"; // Ensure this component runs on the client
 
 import { useState, useRef, useEffect } from 'react';
-import NavBar from '@/components/shared/NavBar';
+import NavBar from '@/components/shared/NavBar/NavBar';
 
 const VideoSection = () => {
     const [isPlaying, setIsPlaying] = useState(true); // State to manage video play/pause
