@@ -4,6 +4,7 @@ import { IoMenu } from 'react-icons/io5';
 import { Button } from "@/components/ui/button";
 import { HiX } from 'react-icons/hi';
 import NavDrowerMenu from './NavDrowerMenu';
+import Link from 'next/link';
 
 interface NavBarProps {
     isScrolled: boolean; // Prop to determine the navbar color
@@ -19,8 +20,8 @@ const NavBar: React.FC<NavBarProps> = ({ isScrolled }) => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-      // Close the drawer if clicked outside
-      useEffect(() => {
+    // Close the drawer if clicked outside
+    useEffect(() => {
         const handleClickOutside = (event: { target: any; }) => {
             if (drawerRef.current && !drawerRef.current.contains(event.target)) {
                 setIsMobileMenuOpen(false); // Close drawer
@@ -45,7 +46,7 @@ const NavBar: React.FC<NavBarProps> = ({ isScrolled }) => {
                 <div className='flex gap-4'>
                     <div onClick={handleDrowerMenu} className='flex items-center'>
                         <div className="bg-black bg-opacity-50 p-2 rounded-full cursor-pointer w-12 h-12">
-                            
+
                             {
                                 isMobileMenuOpen || <IoMenu className='text-3xl text-white' />
                             }
@@ -54,6 +55,34 @@ const NavBar: React.FC<NavBarProps> = ({ isScrolled }) => {
                     <div className="p-2 rounded-full cursor-pointer z-50">
                         <img className='w-16' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/mohg-nav-fan-logo-no-text.svg" alt="" />
                     </div>
+                    {
+                        isScrolled && <div className="hidden md:flex items-center ml-5">
+                            <ul className="flex space-x-6 text-white" role="menu">
+                                <li role="presentation" className="header-navbar-item">
+                                    <Link href="/en/stay" role="menuitem">Stay</Link>
+                                </li>
+                                <li role="presentation" className="header-navbar-item">
+                                    <Link href="/en/dine" role="menuitem">Dine</Link>
+                                </li>
+                                <li role="presentation" className="header-navbar-item">
+                                    <Link href="/en/spa" role="menuitem">Spa</Link>
+                                </li>
+                                <li role="presentation" className="header-navbar-item">
+                                    <Link href="/en/explore" role="menuitem">Explore</Link>
+                                </li>
+                                <li role="presentation" className="header-navbar-item">
+                                    <Link href="/en/celebrate" role="menuitem">Celebrate</Link>
+                                </li>
+                                <li role="presentation" className="header-navbar-item">
+                                    <Link href="/en/meet" role="menuitem">Meet</Link>
+                                </li>
+                                <li role="presentation" className="header-navbar-item">
+                                    <Link href="/en/shop" role="menuitem">Shop</Link>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+
                 </div>
                 <div className='flex justify-center z-50 items-center'>
                     <Button variant="destructive">Book</Button>
