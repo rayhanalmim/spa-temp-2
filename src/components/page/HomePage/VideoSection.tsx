@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import NavBar from '@/components/shared/NavBar/NavBar';
+import MastheadNav from '@/components/shared/MastheadNav';
 
 const VideoSection = () => {
     const [isPlaying, setIsPlaying] = useState(true); // State to manage video play/pause
@@ -42,7 +43,7 @@ const VideoSection = () => {
                 {/* Video element */}
                 <video
                     ref={videoRef}
-                    className="w-full h-[100vh] object-cover"
+                    className="w-full h-[95vh] object-cover"
                     autoPlay
                     muted
                     loop
@@ -60,6 +61,9 @@ const VideoSection = () => {
                 <div className='absolute top-4 z-10 px-10 w-full'>
                     <NavBar isScrolled={isScrolled} /> {/* Pass the scrolled state to NavBar */}
                 </div>
+            </div>
+            <div>
+                <MastheadNav></MastheadNav>
             </div>
         </div>
     );
