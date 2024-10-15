@@ -42,7 +42,7 @@ const VideoSection = () => {
                 {/* Video element */}
                 <video
                     ref={videoRef}
-                    className="w-full h-full object-cover"
+                    className="w-full h-[100vh] object-cover"
                     autoPlay
                     muted
                     loop

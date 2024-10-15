@@ -506,9 +506,6 @@ const NavDrowerMenu = () => {
 
                     </div>
                 </div>
-
-
-                {/* Add the other menu items in a similar structure */}
             </div>
         </div>
     );
