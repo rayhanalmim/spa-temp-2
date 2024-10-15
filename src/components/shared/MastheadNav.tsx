@@ -1,25 +1,28 @@
+import Link from "next/link";
 import React from "react";
 
 const MastheadNav: React.FC = () => {
   return (
-    <div className="container grid grid-cols-8 absolute bottom-4 w-full overflow-x-auto z-3">
-      {navItems.map((item) => (
-        <a
-          key={item.title}
-          href={item.href}
-          target={item.target}
-          className="flex flex-col items-center m-2 transition-all duration-300 hover:scale-105"
-        >
-          <div className="flex flex-col items-center hover:text-[#c7b998]">
-            <div className="w-12 h-12 transition-transform duration-300 ease-in-out transform hover:scale-125">
-              <img src={item.imgSrc} alt={`${item.title} icon`} />
+    <div className="flex justify-center">
+      <div className="container  grid grid-cols-8 absolute bottom-4 w-full overflow-x-auto z-3 ">
+        {navItems.map((item) => (
+          <Link
+            key={item.title}
+            href={item.href}
+            target={item.target}
+            className="flex flex-col items-center m-2 transition-all duration-300 hover:scale-105"
+          >
+            <div className="flex flex-col items-center hover:text-[#c7b998]">
+              <div className="w-12 h-12 transition-transform duration-300 ease-in-out transform hover:scale-125">
+                <img src={item.imgSrc} alt={`${item.title} icon`} />
+              </div>
+              <div className="text-center text-sm mt-2 font-semibold text-white transition-colors duration-300 ease-in-out">
+                {item.title}
+              </div>
             </div>
-            <div className="text-center text-sm mt-2 font-semibold text-white transition-colors duration-300 ease-in-out">
-              {item.title}
-            </div>
-          </div>
-        </a>
-      ))}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
