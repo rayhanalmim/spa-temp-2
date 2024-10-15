@@ -6,6 +6,7 @@ import { FaUser } from "react-icons/fa";
 import { HiX } from 'react-icons/hi';
 import { IoIosArrowDown } from "react-icons/io";
 import { TbWorld } from "react-icons/tb";
+import HeaderDrowerMenu from './HeaderDrowerMenu';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu
@@ -114,59 +115,7 @@ const Header = () => {
                 <div className="flex flex-col space-y-4 mx-6 mt-5">
                     <section id="genericCode" className="req">
                         <div className="">
-                            <div className="flex flex-col ">
-                                {/* Category Filters */}
-                                <div className="filter ">
-                                    <ul
-                                        role="tablist"
-                                        aria-label="Filter by category"
-                                        className="flex space-x-4 px-2 overflow-x-auto"
-                                    >
-                                        <li role="presentation" className="min-w-max border-b-2 border-black">
-                                            <a
-                                                href="#"
-                                                id="all-categories"
-                                                role="tab"
-                                                aria-selected="true"
-                                                className="text-black font-semibold"
-                                            >
-                                                All
-                                            </a>
-                                        </li>
-                                        <li role="presentation" className="min-w-max">
-                                            <a href="#" id="category-0" role="tab" className="text-gray-600">
-                                                Middle East & Africa
-                                            </a>
-                                        </li>
-                                        <li role="presentation" className="min-w-max">
-                                            <a href="#" id="category-1" role="tab" className="text-gray-600">
-                                                Asia-Pacific
-                                            </a>
-                                        </li>
-                                        <li role="presentation" className="min-w-max">
-                                            <a href="#" id="category-2" role="tab" className="text-gray-600">
-                                                Europe
-                                            </a>
-                                        </li>
-                                        <li role="presentation" className="min-w-max">
-                                            <a href="#" id="category-3" role="tab" className="text-gray-600">
-                                                The Americas
-                                            </a>
-                                        </li>
-                                        <li role="presentation" className="min-w-max">
-                                            <a href="#" id="category-4" role="tab" className="text-gray-600">
-                                                Residences
-                                            </a>
-                                        </li>
-                                        <li role="presentation" className="min-w-max">
-                                            <a href="#" id="category-5" role="tab" className="text-gray-600">
-                                                Partners
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
+                            <HeaderDrowerMenu></HeaderDrowerMenu>
 
                             {/* Hotel List */}
                             <div className="list-wrapper mt-6 space-y-2  max-h-[500px] overflow-auto scrollbar-hide">
