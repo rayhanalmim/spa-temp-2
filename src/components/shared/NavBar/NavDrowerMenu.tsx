@@ -1,13 +1,14 @@
 import React from 'react';
 import { IoIosArrowForward } from "react-icons/io";
+import { Button } from "@/components/ui/button"
 
 const NavDrowerMenu = () => {
     return (
         <div>
-            <div className="flex h-[650px] overflow-y-scroll scrollbar-hide">
+            <div className="flex h-[650px] overflow-y-scroll scrollbar-hide mb-16">
 
-                <div className='mr-6'>
-                    <div className="flex gap-2 ml-24">
+                <div className='mr-6 space-y-7'>
+                    <div className="flex gap-2 ml-10 lg:ml-24">
                         <span className="flex justify-center items-center">
                             <img className='w-9 h-9' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/main-nav-icon-stay.svg" alt="" />
                         </span>
@@ -20,8 +21,227 @@ const NavDrowerMenu = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="flex gap-2 ml-10 lg:ml-24">
+                        <span className="flex justify-center items-center">
+                            <img className='w-9 h-9' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/main-nav-icon-residences.svg" alt="" />
+                        </span>
+                        <div className='flex gap-1'>
+                            <div className='flex justify-center items-center'>
+                                <span className="font-semibold text-xl mt-1">Residences</span>
+                            </div>
+                            <div className='flex justify-center mt-1 items-center'>
+                                {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex gap-2 ml-10 lg:ml-24">
+                        <span className="flex justify-center items-center">
+                            <img className='w-9 h-9' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/main-nav-icon-dine.svg" alt="" />
+                        </span>
+                        <div className='flex gap-1'>
+                            <div className='flex justify-center items-center'>
+                                <span className="font-semibold text-xl mt-1">Dine</span>
+                            </div>
+                            <div className='flex justify-center mt-1 items-center'>
+                                {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex gap-2 ml-10 lg:ml-24">
+                        <span className="flex justify-center items-center">
+                            <img className='w-9 h-9' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/main-nav-icon-spa.svg" alt="" />
+                        </span>
+                        <div className='flex gap-1'>
+                            <div className='flex justify-center items-center'>
+                                <span className="font-semibold text-xl mt-1">Spa</span>
+                            </div>
+                            <div className='flex justify-center mt-1 items-center'>
+                                {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex gap-2 ml-10 lg:ml-24">
+                        <span className="flex justify-center items-center">
+                            <img className='w-9 h-9' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/main-nav-icon-explore.svg" alt="" />
+                        </span>
+                        <div className='flex gap-1'>
+                            <div className='flex justify-center items-center'>
+                                <span className="font-semibold text-xl mt-1">Explore</span>
+                            </div>
+                            <div className='flex justify-center mt-1 items-center'>
+                                {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex gap-2 ml-10 lg:ml-24">
+                        <span className="flex justify-center items-center">
+                            <img className='w-9 h-9' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/main-nav-icon-celebrate.svg" alt="" />
+                        </span>
+                        <div className='flex gap-1'>
+                            <div className='flex justify-center items-center'>
+                                <span className="font-semibold text-xl mt-1">Celebrate</span>
+                            </div>
+                            <div className='flex justify-center mt-1 items-center'>
+                                {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex gap-2 ml-10 lg:ml-24">
+                        <span className="flex justify-center items-center">
+                            <img className='w-9 h-9' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/main-nav-icon-meet.svg" alt="" />
+                        </span>
+                        <div className='flex gap-1'>
+                            <div className='flex justify-center items-center'>
+                                <span className="font-semibold text-xl mt-1">Meet</span>
+                            </div>
+                            <div className='flex justify-center mt-1 items-center'>
+                                {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex gap-2 ml-10 lg:ml-24">
+                        <span className="flex justify-center items-center">
+                            <img className='w-9 h-9' src="https://photos.mandarinoriental.com/is/content/MandarinOriental/_Global/Icons/Main%20Navigation/main-nav-icon-shop.svg" alt="" />
+                        </span>
+                        <div className='flex gap-1'>
+                            <div className='flex justify-center items-center'>
+                                <span className="font-semibold text-xl mt-1">Shop</span>
+                            </div>
+                            <div className='flex justify-center mt-1 items-center'>
+                                {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                <div className='flex justify-center items-center'>
+                                    <span className="font-semibold mt-1">O&MO Alliance</span>
+                                </div>
+                                <div className='flex justify-center mt-1 items-center'>
+                                    {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                <div className='flex justify-center items-center'>
+                                    <span className="font-semibold mt-1">Fans of M.O. Members</span>
+                                </div>
+                                <div className='flex justify-center mt-1 items-center'>
+                                    {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                <div className='flex justify-center items-center'>
+                                    <span className="font-semibold mt-1">Offers</span>
+                                </div>
+                                <div className='flex justify-center mt-1 items-center'>
+                                    {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                <div className='flex justify-center items-center'>
+                                    <span className="font-semibold mt-1">About Us</span>
+                                </div>
+                                <div className='flex justify-center mt-1 items-center'>
+                                    {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                <div className='flex justify-center items-center'>
+                                    <span className="font-semibold mt-1">Our Celebrity Fans</span>
+                                </div>
+                                <div className='flex justify-center mt-1 items-center'>
+                                    {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                <div className='flex justify-center items-center'>
+                                    <span className="font-semibold mt-1">MO Magazine</span>
+                                </div>
+                                <div className='flex justify-center mt-1 items-center'>
+                                    {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                {/* <Button variant="outline">Contract Us</Button> */}
+                            </div>
+                        </div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                <div className='flex justify-center items-center'>
+                                    <span className="font-semibold mt-1">O&MO Alliance</span>
+                                </div>
+                                <div className='flex justify-center mt-1 items-center'>
+                                    {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                <div className='flex justify-center items-center'>
+                                    <span className="font-semibold mt-1">MO Magazine</span>
+                                </div>
+                                <div className='flex justify-center mt-1 items-center'>
+                                    {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 ml-10 lg:ml-24">
+                            <div className="flex justify-center items-center">
+                                <div className='w-9 h-9'></div>
+                            </div>
+                            <div className='flex gap-1'>
+                                <div className='flex justify-center items-center'>
+                                    <span className="font-semibold mt-1">MO Magazine</span>
+                                </div>
+                                <div className='flex justify-center mt-1 items-center'>
+                                    {/* <IoIosArrowForward className='text-lg'></IoIosArrowForward> */}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className=" hidden ml-10 md:flex gap-6 opacity-100 group-hover:flex group-hover:opacity-100  transition-all duration-300">
+
+                <div className=" hidden md:flex gap-3 lg:gap-6 opacity-100 group-hover:flex group-hover:opacity-100  transition-all duration-300">
                     <div className="flex flex-col space-y-3">
                         <div className="font-semibold text-xl">Asia-Pacific</div>
                         <ul className="space-y-3">
@@ -277,13 +497,13 @@ const NavDrowerMenu = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="flex flex-col ml-8 space-y-3">
+                    <div className="flex flex-col mr-3 ml-8 space-y-3">
                         <div className="font-semibold">Overview</div>
                         <div className="font-semibold">Our Hotels</div>
                         <div className="font-semibold">Exclusive Homes</div>
                         <div className="font-semibold">Residences</div>
                         <div className="font-semibold">O&MO Alliance</div>
-                        
+
                     </div>
                 </div>
 
