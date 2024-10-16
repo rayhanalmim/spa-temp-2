@@ -6,11 +6,15 @@ import HighlightSlide from './HighlightSlide';
 
 const HighlightSection = () => {
 
-    const [activeMenu, setActiveMenu] = useState<string>('all-categories'); // State to track active menu
+    const [activeMenu, setActiveMenu] = useState<number>(1); // State to track active menu
 
-    const handleMenuClick = (id: string) => {
+    const handleMenuClick = (id: number) => {
         setActiveMenu(id);
     };
+
+    // Find the slides for the active menu
+    const currentSlides = menuItem.find(item => item.id === activeMenu)?.slides || [];
+    console.log(currentSlides);
 
     return (
         <div className='pt-10 pb-4'>
@@ -53,7 +57,7 @@ const HighlightSection = () => {
                                     }`}
                             >
                                 <div
-                                    id={item.id}
+                                    id={item.id.toString()}
                                     role="tab"
                                     aria-selected={activeMenu === item.id}
                                     className={`font-semibold ${activeMenu === item.id ? 'text-black' : 'text-gray-600'
@@ -68,7 +72,7 @@ const HighlightSection = () => {
                 </div>
             </div>
             <div>
-                <HighlightSlide></HighlightSlide>
+                <HighlightSlide currentData={currentSlides}></HighlightSlide>
             </div>
         </div>
     );
@@ -76,26 +80,136 @@ const HighlightSection = () => {
 
 const menuItem = [
     {
-        "id": "all-categories",
-        "label": "Spotlight"
+        id: 1,
+        label: "Spotlight",
+        slides: [
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Maldives Escape",
+                description: "Escape to a private island and enjoy crystal clear waters."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Alps Adventure",
+                description: "Ski the world's most famous slopes and enjoy après-ski delights."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Rome Visit",
+                description: "Discover ancient landmarks and explore Italian art and cuisine."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Kenya Safari",
+                description: "Experience the thrill of African wildlife in the heart of Kenya."
+            }
+        ]
     },
     {
-        "id": "category-0",
-        "label": "Asia-Pacific"
+        id: 2,
+        label: "Asia-Pacific",
+        slides: [
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Tokyo Lights",
+                description: "Explore the vibrant streets and cutting-edge technology of Tokyo."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Sydney View",
+                description: "Enjoy the iconic views of the Opera House and Harbour Bridge."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Bali Beach",
+                description: "Relax on pristine beaches and enjoy Bali’s unique culture."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Singapore Tour",
+                description: "Discover the modern architecture and cultural diversity of Singapore."
+            }
+        ]
     },
     {
-        "id": "category-1",
-        "label": "The Americas"
+        id: 3,
+        label: "The Americas",
+        slides: [
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "New York",
+                description: "Experience the bustling city life and iconic landmarks of NYC."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Amazon Jungle",
+                description: "Explore the untouched wilderness and biodiversity of the Amazon."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Caribbean",
+                description: "Relax on the sandy beaches and crystal-clear waters of the Caribbean."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Patagonia",
+                description: "Discover the stunning landscapes and outdoor adventures in Patagonia."
+            }
+        ]
     },
     {
-        "id": "category-2",
-        "label": "Europe"
+        id: 4,
+        label: "Europe",
+        slides: [
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Paris",
+                description: "Enjoy romantic views and iconic sights in the heart of Paris."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "London",
+                description: "Explore historic landmarks and modern attractions in London."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Swiss Alps",
+                description: "Ski and hike the breathtaking mountains of Switzerland."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Greek Isles",
+                description: "Relax on the stunning islands and explore ancient ruins in Greece."
+            }
+        ]
     },
     {
-        "id": "category-3",
-        "label": "Middle East & Africa"
+        id: 5,
+        label: "Middle East & Africa",
+        slides: [
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Dubai",
+                description: "Discover luxury shopping, modern architecture, and vibrant nightlife."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Cape Town",
+                description: "Explore the rich culture and stunning landscapes of Cape Town."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Sahara",
+                description: "Experience the vast beauty and unique culture of the Sahara Desert."
+            },
+            {
+                image: "https://via.placeholder.com/300x200",
+                title: "Nile Cruise",
+                description: "Sail along the iconic Nile River and explore ancient Egyptian wonders."
+            }
+        ]
     }
-]
+];
 
 
 export default HighlightSection;

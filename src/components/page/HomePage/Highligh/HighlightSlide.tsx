@@ -12,7 +12,7 @@ import "./highlight.css";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-const HighlightSlide = () => {
+const HighlightSlide = ({currentData} : {currentData : any}) => {
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
@@ -78,7 +78,7 @@ const HighlightSlide = () => {
               {
                 // Inline loop inside JSX
                 Array.from({ length: 7 }).map((_, index) => (
-                  <div className="keen-slider__slide ">
+                  <div key={index} className="keen-slider__slide">
                     <div className="bg-white">
                       <article className="bg-secondary rounded-lg mx-2 p-3">
                         <div className="relative">
