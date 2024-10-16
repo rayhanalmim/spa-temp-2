@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { IoIosArrowForward } from "react-icons/io";
+import HighlightSlide from './HighlightSlide';
 
 const HighlightSection = () => {
 
@@ -12,7 +13,7 @@ const HighlightSection = () => {
     };
 
     return (
-        <div className='py-10'>
+        <div className='pt-10 pb-4'>
             <div className="px-12 flex flex-col md:flex-row gap-10">
                 <div className="">
                     <h2 className="text-5xl md:text-7xl">
@@ -37,7 +38,7 @@ const HighlightSection = () => {
                     </div>
                 </div>
             </div>
-            <div className='px-3 pt-10 pb-4'>
+            <div className='px-2 md:px-4 pt-10 pb-4'>
                 <div className="filter">
                     <ul
                         role="tablist"
@@ -65,6 +66,9 @@ const HighlightSection = () => {
                         ))}
                     </ul>
                 </div>
+            </div>
+            <div>
+                <HighlightSlide></HighlightSlide>
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
 import HeaderText from "@/components/page/HomePage/HeaderText";
-import HighlightSection from "@/components/page/HomePage/HighlightSection";
+import HighlightSection from "@/components/page/HomePage/Highligh/HighlightSection";
 import VideoSection from "@/components/page/HomePage/VideoSection";
 import Footer from "@/components/shared/Footer";
 import Header from "@/components/shared/Header/Header";
@@ -18,4 +18,4 @@ export default function Home() {
       <Footer></Footer>
     </div>
   );
-}
+};

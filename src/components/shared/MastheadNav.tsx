@@ -16,7 +16,7 @@ const MastheadNav: React.FC = () => {
               <div className="w-12 h-12 transition-transform duration-300 ease-in-out transform hover:scale-125">
                 <img src={item.imgSrc} alt={`${item.title} icon`} />
               </div>
-              <div className="text-center text-sm mt-2 font-semibold text-white transition-colors duration-300 ease-in-out">
+              <div className="text-center hidden md:flex text-sm mt-2 font-semibold text-white transition-colors duration-300 ease-in-out">
                 {item.title}
               </div>
             </div>
