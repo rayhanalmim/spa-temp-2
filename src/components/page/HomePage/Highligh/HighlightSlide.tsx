@@ -77,20 +77,20 @@ const HighlightSlide = ({currentData} : {currentData : any}) => {
 
               {
                 // Inline loop inside JSX
-                Array.from({ length: 7 }).map((_, index) => (
+                currentData.map((item: any, index: React.Key | null | undefined) => (
                   <div key={index} className="keen-slider__slide">
                     <div className="bg-white">
                       <article className="bg-secondary rounded-lg mx-2 p-3">
                         <div className="relative">
                           <div className="relative">
-                            <img className='rounded-md h-[400px] object-cover' src="https://photos.mandarinoriental.com/is/image/MandarinOriental/qianmen-lobby-courtyard?wid=1600&hei=900&fmt=jpeg&op_usm=1,1,5,0&resMode=sharp2&fit=crop&qlt=75,0" alt="" />
+                            <img className='rounded-md h-[400px] object-cover' src={item.image} alt="" />
                           </div>
                           <div className="flex items-center justify-between mt-3">
                             <div className='flex items-center ml-1'>
                               <div>
-                                <h3 className="text-xl font-semibold">Bangkok</h3>
+                                <h3 className="text-xl font-semibold">{item.title}</h3>
 
-                                <p>For more than 148 years, travellers have followed the Chao...</p>
+                                <p>{item.description}</p>
                               </div>
                             </div>
                             <div className='flex justify-center items-center mr-2'>
