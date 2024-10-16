@@ -62,16 +62,16 @@ const HighlightSlide = ({currentData} : {currentData : any}) => {
   return (
     <div>
       <div className="relative  rounded-md mb-10">
-        {/* Left Arrow */}
-        <button
-          className="hidden md:flex absolute left-12 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full z-10"
+         {/* Left Arrow */}
+         <button
+          className="hidden md:flex absolute left-12 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full z-[1]"
           onClick={() => slider.current?.prev()}
         >
           <FaArrowLeft className="text-black" />
         </button>
 
         {/* Slider Section */}
-        <section className="">
+        <section className="-z-10">
           <div className="container mx-auto relative">
             <div ref={sliderRef} className="keen-slider">
 
@@ -83,7 +83,7 @@ const HighlightSlide = ({currentData} : {currentData : any}) => {
                       <article className="bg-secondary rounded-lg mx-2 p-3">
                         <div className="relative">
                           <div className="relative">
-                            <img className='rounded-md h-[400px] object-cover' src={item.image} alt="" />
+                            <img className='rounded-md h-[350px] object-cover' src={item.image} alt="" />
                           </div>
                           <div className="flex items-center justify-between mt-3">
                             <div className='flex items-center ml-1'>
@@ -121,7 +121,7 @@ const HighlightSlide = ({currentData} : {currentData : any}) => {
 
         {/* Right Arrow */}
         <button
-          className="hidden md:flex absolute right-12 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full z-10"
+          className="hidden md:flex absolute right-12 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full z-[1]"
           onClick={() => slider.current?.next()}
         >
           <FaArrowRight className="text-black" />

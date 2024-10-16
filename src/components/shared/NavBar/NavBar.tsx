@@ -42,7 +42,7 @@ const NavBar: React.FC<NavBarProps> = ({ isScrolled }) => {
 
     return (
         <div className='fixed top-[35px] left-0 w-full z-10 '>
-            <div className={`flex justify-between px-8 py-1 transition-colors duration-300 ${isScrolled ? 'bg-[#191617]' : 'bg-transparent'}`}>
+            <div className={`flex justify-between px-8 py-1 transition-colors duration-300 ${isScrolled ? 'bg-[#191617]  bg-opacity-60 backdrop-blur-md' : 'bg-transparent'}`}>
                 <div className='flex gap-4'>
                     <div onClick={handleDrowerMenu} className='flex items-center'>
                         <div className="bg-black bg-opacity-50 p-2 rounded-full cursor-pointer w-12 h-12">
