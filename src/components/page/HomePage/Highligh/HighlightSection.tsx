@@ -42,7 +42,7 @@ const HighlightSection = () => {
                     </div>
                 </div>
             </div>
-            <div className='px-2 md:px-4 pt-10 pb-4'>
+            <div className='px-2 md:px-4 pt-10 pb-8'>
                 <div className="filter">
                     <ul
                         role="tablist"

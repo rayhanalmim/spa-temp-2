@@ -1,5 +1,7 @@
+import Dine from "@/components/page/HomePage/Dine/Dine";
 import HeaderText from "@/components/page/HomePage/HeaderText";
 import HighlightSection from "@/components/page/HomePage/Highligh/HighlightSection";
+import Spa from "@/components/page/HomePage/Spa/Spa";
 import TeaserLink from "@/components/page/HomePage/TeaserLink";
 import VideoSection from "@/components/page/HomePage/VideoSection";
 import Footer from "@/components/shared/Footer";
@@ -17,6 +19,8 @@ export default function Home() {
       </div>
       <HighlightSection></HighlightSection>
       <TeaserLink></TeaserLink>
+      <Dine></Dine>
+      <Spa></Spa>
       <Footer></Footer>
     </div>
   );
