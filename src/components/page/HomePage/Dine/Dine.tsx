@@ -30,14 +30,14 @@ const Dine = () => {
 
 
     return (
-        <div>
+        <div className='my-4 md:my-7 lg:my-14'>
             <div className="px-12 flex flex-col md:flex-row gap-10">
                 <div className="">
                     <h2 className="text-5xl md:text-7xl">
                         <span>Dine</span>
                     </h2>
                 </div>
-                <div className='flex flex-col items-center w-full md:w-2/5'>
+                <div className='flex items-center  w-full md:w-2/5'>
                     <div className="">
                         <div className="text-base leading-snug text-gray-900">
                             Michelin stars, award-winning bars, and exquisite flavours.
