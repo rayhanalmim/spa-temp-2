@@ -1,4 +1,5 @@
 import Dine from "@/components/page/HomePage/Dine/Dine";
+import ExploreSection from "@/components/page/HomePage/Explore/ExploreSection";
 import HeaderText from "@/components/page/HomePage/HeaderText";
 import HighlightSection from "@/components/page/HomePage/Highligh/HighlightSection";
 import Spa from "@/components/page/HomePage/Spa/Spa";
@@ -21,6 +22,8 @@ export default function Home() {
       <TeaserLink></TeaserLink>
       <Dine></Dine>
       <Spa></Spa>
+
+      <ExploreSection></ExploreSection>
       <Footer></Footer>
     </div>
   );
